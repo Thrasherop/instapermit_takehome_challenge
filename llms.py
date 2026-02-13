@@ -1,12 +1,16 @@
 from google import genai
 from openai import OpenAI
 
-def get_gemini_response(message : str) -> str:
+def get_gemini_response(message : str, skip_remote_call : bool = False) -> str:
 
     
+    if skip_remote_call:
+        # Just go to local llm
+        return _fallback_to_local_llm(message)
 
     text = ""
     try:
+
         client = genai.Client()
 
         response = client.models.generate_content(

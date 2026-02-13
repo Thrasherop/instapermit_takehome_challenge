@@ -126,7 +126,7 @@ def enhance_data(data : list[dict]) -> list[dict]:
 
         # generate the prompt and response
         this_prompt = prompt_template.replace("$${title}", f"{product['title']}").replace("$${description}", f"{product['description']}").replace("$${price}", f"{product['price']}").replace("$${rating}", f"{product['rating']}")
-        response = get_gemini_response(this_prompt)
+        response = get_gemini_response(this_prompt, skip_remote_call=True)
 
         # create new product dict with new information
         new_product_info = product.copy()
