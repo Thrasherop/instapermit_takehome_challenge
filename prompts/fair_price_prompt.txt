@@ -1,0 +1,7 @@
+Please determine if the following product is a fair deal based on the information below, and whether you can recommend it given the information. 
+I recognize its not a ton of information, but its all the information that the user has. As such, DO NOT respond with "I can't give a recommendation". I want you to still give a recommendation.
+
+Product title: $${title}
+Description: $${description}
+Rating: $${rating}
+Price: $${price}

@@ -1,0 +1,6 @@
+selenium
+requests
+
+python-dotenv
+google-genai
+openai
